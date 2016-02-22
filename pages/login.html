@@ -1,0 +1,15 @@
+<div class="container">
+    <div class="row">
+        <form ng-submit="login()" role="form">
+            <div class="form-group">
+                <label for="user">User:</label>
+                <input ng-model="auth.user" name="user" class="form-control" type="text" id="user">
+            </div>
+            <div class="form-group">
+                <label for="pwd">Password:</label>
+                <input ng-model="auth.password" class="form-control" name="password" type="password" id="pwd">
+            </div>
+            <button type="submit" class="btn btn-default">Submit</button>
+        </form>
+    </div>
+</div>

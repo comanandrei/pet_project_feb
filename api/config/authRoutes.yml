@@ -1,0 +1,9 @@
+login:
+  path: /login
+  defaults: { _controller: 'Auth\AuthController::loginAction'}
+  methods:  [POST]
+
+logout:
+  path: /logout
+  defaults: { _controller: 'Auth\AuthController::logoutAction'}
+  methods:  [GET]

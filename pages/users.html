@@ -1,0 +1,37 @@
+<span ng-model="username"></span>
+
+<div class="row">
+    <ul style="list-style-type: none;" class="col-md-12">
+        <li ng-repeat="user in users">
+            <div class="row">
+                <button class="btn btn-warning col-md-2" ng-click="selectUser($index)">edit</button>
+                <span class="col-md-8">#{{user.id}} - {{user.first_name}} - {{user.last_name}}</span>
+                <button class="btn btn-danger col-md-2"  ng-click="deleteUser($index, user.id)">delete</button>
+
+            </div>
+        </li>
+    </ul>
+
+    <form role="form" id="formUser" class="form-inline" class="col-md-12">
+        <div class="row">
+            <div class="form-group col-md-4">
+                <label for="first_name">Email address:</label>
+                <input type="text" class="form-control"  ng-model="first_name" placeholder="first" id="first_name">
+            </div>
+
+            <div class="form-group col-md-4">
+                <label for="last_name">Email address:</label>
+                <input type="text" class="form-control"  ng-model="last_name" placeholder="last" id="last_name">
+            </div>
+
+            <div class="col-md-4">
+                <button class="btn btn-success" ng-click="add()" ng-show='addMode'>Create</button>
+                <button class="btn btn-primary" ng-click="update()" ng-hide='addMode'>Update</button>
+                <button class="btn btn-warning" ng-click="cancel()" ng-hide='addMode'>Cancel</button>
+            </div>
+
+        </div>
+    </form>
+</div>
+
+<button class="btn btn-default"  ng-click="logOut()">Logout</button>

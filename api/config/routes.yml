@@ -1,0 +1,7 @@
+users:
+  prefix: /
+  resource: userRoutes.yml
+
+auth:
+  prefix: /auth
+  resource: authRoutes.yml

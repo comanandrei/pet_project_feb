@@ -1,0 +1,3 @@
+<?php
+
+CONST EXPIRATION_TOKEN = 5* 60;

@@ -1,0 +1,27 @@
+getAll:
+  path: /users
+  defaults: { _controller: 'User\UserController::getAllAction' }
+  methods:  [POST]
+
+
+getOne:
+  path: /user/{id}
+  defaults: { _controller: 'User\UserController::getOneAction' }
+  methods:  [GET]
+
+
+detele:
+  path: /delete
+  defaults: { _controller: 'User\UserController::deleteOneAction' }
+  methods:  [POST]
+
+
+update:
+  path: /update/{id}
+  defaults: { _controller: 'User\UserController::editOneAction' }
+  methods:  [PUT]
+
+create:
+  path: /create
+  defaults: { _controller: 'User\UserController::addOneAction' }
+  methods:  [POST]
